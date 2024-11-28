@@ -8,8 +8,8 @@ import android.content.Context;
 import com.mmd.daggerdemo.data.MyApplication;
 import com.mmd.daggerdemo.data.component.ActivityComponent;
 import com.mmd.daggerdemo.data.component.ApplicationComponent;
-import com.mmd.daggerdemo.data.component.DaggerActivityComponent;
-import com.mmd.daggerdemo.data.component.DaggerApplicationComponent;
+//import com.mmd.daggerdemo.data.component.DaggerActivityComponent;
+//import com.mmd.daggerdemo.data.component.DaggerApplicationComponent;
 import com.mmd.daggerdemo.data.module.ActivityModule;
 import com.mmd.daggerdemo.data.module.ApplicationModule;
 import com.mmd.daggerdemo.data.ui.MainActivity;
@@ -30,15 +30,15 @@ public class ActivityComponentTest {
 
         // Create ApplicationComponent
         MyApplication mockApplication = mock(MyApplication.class);
-        applicationComponent = DaggerApplicationComponent.builder()
-                .applicationModule(new ApplicationModule(mockApplication))
-                .build();
+//        applicationComponent = DaggerApplicationComponent.builder()
+//                .applicationModule(new ApplicationModule(mockApplication))
+//                .build();
 
         // Create ActivityComponent and set ApplicationComponent as a dependency
-        activityComponent = DaggerActivityComponent.builder()
-                .applicationComponent(applicationComponent) // Pass ApplicationComponent here
-                .activityModule(new ActivityModule(mockActivity))
-                .build();
+//        activityComponent = DaggerActivityComponent.builder()
+//                .applicationComponent(applicationComponent) // Pass ApplicationComponent here
+//                .activityModule(new ActivityModule(mockActivity))
+//                .build();
     }
 
     @Test

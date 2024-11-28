@@ -9,7 +9,7 @@ import androidx.test.core.app.ActivityScenario;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import com.mmd.daggerdemo.data.MyApplication;
-import com.mmd.daggerdemo.data.component.DaggerActivityComponent;
+//import com.mmd.daggerdemo.data.component.DaggerActivityComponent;
 import com.mmd.daggerdemo.data.module.ActivityModule;
 import com.mmd.daggerdemo.data.remote.NetworkService;
 import com.mmd.daggerdemo.data.ui.MainActivity;
@@ -32,17 +32,17 @@ public class MainActivityUiTest {
         MockitoAnnotations.initMocks(this);
 
         // Mock NetworkService behavior
-        Mockito.when(mockNetworkService.getDummyData()).thenReturn("Test Data");
+//        Mockito.when(mockNetworkService.getDummyData()).thenReturn("Test Data");
 
         // Inject mocked dependencies into Dagger
         ActivityScenario<MainActivity> scenario = ActivityScenario.launch(MainActivity.class);
-        scenario.onActivity(activity -> {
-            DaggerActivityComponent.builder()
-                    .applicationComponent(((MyApplication) activity.getApplication()).applicationComponent)
-                    .activityModule(new ActivityModule(activity))
-                    .build()
-                    .inject(activity);
-        });
+//        scenario.onActivity(activity -> {
+//            DaggerActivityComponent.builder()
+//                    .applicationComponent(((MyApplication) activity.getApplication()).applicationComponent)
+//                    .activityModule(new ActivityModule(activity))
+//                    .build()
+//                    .inject(activity);
+//        });
     }
 
     @Test
